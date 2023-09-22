@@ -123,7 +123,7 @@ var em;
 
 app.get("https://job-finder-eta-one.vercel.app", async (req, res) => {
   try {
-    
+    res.render("Jet");
     res.render("home");
   } catch (err) {
     console.log(err);
