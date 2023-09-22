@@ -121,7 +121,7 @@ const Job = mongoose.model("Job", jobSchema);
 var em;
 
 
-app.get("/", async (req, res) => {
+app.get("https://job-finder-eta-one.vercel.app/", async (req, res) => {
   try {
     
     res.render("home");
@@ -130,7 +130,7 @@ app.get("/", async (req, res) => {
   }
 });
 
-app.get("/login", async (req, res) => {
+app.get("https://job-finder-eta-one.vercel.app/login", async (req, res) => {
   try {
     
     res.render("login");
@@ -139,7 +139,7 @@ app.get("/login", async (req, res) => {
   }
 });
 
-app.get("/recruiter", async (req, res) => {
+app.get("https://job-finder-eta-one.vercel.app/recruiter", async (req, res) => {
   try {
     
     res.render("recruiter");
@@ -148,7 +148,7 @@ app.get("/recruiter", async (req, res) => {
   }
 });
 
-app.get("/postjob", async (req, res) => {
+app.get("https://job-finder-eta-one.vercel.app/postjob", async (req, res) => {
   try{
     res.render("postjob");
   }catch(err)
@@ -157,7 +157,7 @@ app.get("/postjob", async (req, res) => {
   }
 });
 
-app.get("/postresume", async (req, res) => {
+app.get("https://job-finder-eta-one.vercel.app/postresume", async (req, res) => {
   try{
     res.render("postresume");
   }catch(err)
@@ -167,7 +167,7 @@ app.get("/postresume", async (req, res) => {
 });
 
 
-app.get("/jobseeker", async (req, res) => {
+app.get("https://job-finder-eta-one.vercel.app/jobseeker", async (req, res) => {
   try {
     res.render("jobseeker",{
       em : em
@@ -178,7 +178,7 @@ app.get("/jobseeker", async (req, res) => {
 });
 
 
-app.get("/alljobs", async (req,res)=>{
+app.get("https://job-finder-eta-one.vercel.app/alljobs", async (req,res)=>{
   try{
     const posts = await Job.find({ });
     res.render("alljobs",{
@@ -190,7 +190,7 @@ app.get("/alljobs", async (req,res)=>{
   }
 })
 
-app.get("/allcandidate", async (req,res)=>{
+app.get("https://job-finder-eta-one.vercel.app/allcandidate", async (req,res)=>{
   try{
     const posts = await Resume.find({ });
     //console.log(posts);
@@ -204,7 +204,7 @@ app.get("/allcandidate", async (req,res)=>{
 })
 
 
-app.post("/login", async(req,res)=>{
+app.post("https://job-finder-eta-one.vercel.app/login", async(req,res)=>{
   try{
       const email = req.body.email;
       const password = req.body.password;
