@@ -121,9 +121,9 @@ const Job = mongoose.model("Job", jobSchema);
 var em;
 
 
-app.get("https://job-finder-eta-one.vercel.app", async (req, res) => {
+app.get("/", async (req, res) => {
   try {
-    res.render("Jet");
+    // res.render("Jet");
     res.render("home");
   } catch (err) {
     console.log(err);
