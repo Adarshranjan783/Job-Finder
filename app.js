@@ -121,7 +121,7 @@ const Job = mongoose.model("Job", jobSchema);
 var em;
 
 
-app.get("/", async (req, res) => {
+app.get("./", async (req, res) => {
   try {
     // res.render("Jet");
     res.render("home");
